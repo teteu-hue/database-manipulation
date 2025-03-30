@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Database\\' => array($baseDir . '/QueryBuilder'),
+    'QueryBuilder\\' => array($baseDir . '/QueryBuilder'),
+    'Connection\\' => array($baseDir . '/Connection'),
     'App\\' => array($baseDir . '/src'),
 );
