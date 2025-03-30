@@ -51,7 +51,7 @@ final class Transaction
     /**
      * Fecha a conexão com o banco de dados e commita as alterações no banco.
      */
-    public static function close()
+    public static function commit()
     {
         if(self::$conn) {
             self::$conn->commit();

@@ -48,7 +48,7 @@ try {
     $conn = Transaction::get();
     $results = $conn->query($update->getInstruction());
 
-    Transaction::close();
+    Transaction::commit();
 
 } catch(Exception $e) {
     echo $e->getMessage() . "\n";
