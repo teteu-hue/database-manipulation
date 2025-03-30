@@ -54,6 +54,7 @@ try {
     echo $e->getMessage() . "\n";
 
     Transaction::rollback();
+    
 }
 
 $select_querie = new TSqlSelect();
