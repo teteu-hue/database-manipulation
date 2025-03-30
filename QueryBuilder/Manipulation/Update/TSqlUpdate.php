@@ -44,7 +44,7 @@ final class TSqlUpdate extends TSqlInstruction
      * `
      * @return array;
      */
-    private function mountColumnValues(): array
+    private function mountColumnValues()
     {
         if ($this->columnValues) {
             foreach ($this->columnValues as $column => $value) {
@@ -80,6 +80,6 @@ final class TSqlUpdate extends TSqlInstruction
     {
         $set = (array) $this->mountColumnValues();
         $this->mountInstruction($set);
-        return $this->sql;
+        return $this->sql .= ";";
     }
 }

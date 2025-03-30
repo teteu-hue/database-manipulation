@@ -22,7 +22,9 @@ final class TSqlSelect extends TSqlInstruction
      */
     public function addColumn($column)
     {
-        $this->columns[] = $column;
+        if(!empty($column)){
+            $this->columns[] = $column;
+        }
     }
 
     public function join(string $type, $paramsJoin)
@@ -59,7 +61,7 @@ final class TSqlSelect extends TSqlInstruction
 
             $this->mountPropertiesInstruction();
         }
-        return $this->sql;
+        return $this->sql .= ";";
     }
 
     private function mountPropertiesInstruction()

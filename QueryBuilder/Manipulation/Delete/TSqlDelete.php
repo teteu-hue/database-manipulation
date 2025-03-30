@@ -26,6 +26,6 @@ final class TSqlDelete extends TSqlInstruction
     public function getInstruction()
     {
         $this->mountInstruction();
-        return $this->sql;
+        return $this->sql .= ";";
     }
 }
